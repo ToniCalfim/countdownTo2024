@@ -1,0 +1,198 @@
+/* General Info For This CSS file *********************************************
+ *
+ * Project      : newYearCountdownOOPVersion
+ *File Type     : CSS
+ * File Editor  : File was last edited using: VSCodium
+ * Description  :
+ *******************************************************************************
+ * Author   : Toni Calfim (751127@gmail.com)
+ *******************************************************************************
+ * Version  : 1.0.0.1
+ * Created  : Jan, 2023
+ * Modified : Jan, 2023
+ * Lincence : MIT
+ *******************************************************************************
+ * History:
+**************************************************************************** **/
+
+:root {
+
+    --globalColor: tomato;
+
+    --color-Stripe: cyan;
+
+    --color-newYear: red;
+    --color-newYear-shadow: white;
+
+    --color-h1: darkred;
+    --color-h1-shadow: red;
+
+    --color-digits: brown;
+    --color-digits-after: indianred;
+    --color-digits-after-shadow: brown;
+
+    --digitsAfterFontSize: 25px;
+
+    --bgImageURL: url("https://images.unsplash.com/photo-1672233834558-3aeecbe83a5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDE4OHxxUFlzRHp2Sk9ZY3x8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60");
+
+}
+
+body {
+
+    background-color: var(--globalColor);
+
+    background-image: var(--bgImageURL);
+    background-size: cover;
+    background-attachment: fixed;
+
+    overflow: hidden;
+
+}
+
+h1 {
+
+    color: var(--color-h1);
+
+    /* offset-x | offset-y | blur-radius | color */
+    text-shadow: 1px 1px 2px var(--color-h1-shadow);
+    text-align: center;
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 50px;
+    font-weight: bolder;
+
+    letter-spacing: 2px;
+
+    z-index: 2;
+
+}
+
+.new-year {
+
+    color: var(--color-newYear);
+
+    font-family: cursive;
+    font-size: 100px;
+    font-weight: bold;
+
+    letter-spacing: 25px;
+
+    /* offset-x | offset-y | blur-radius | color */
+    text-shadow: 1px 1px 2px var(--color-newYear-shadow);
+
+    margin-top: -2.25%;
+
+}
+
+.is-opaque-image {
+
+    /* background-image: var(--bgImageURL); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+
+
+    opacity: 25%;
+
+}
+
+.main-div {
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    justify-items: flex-start;
+    padding: 0px;
+    gap: 0px;
+
+}
+
+/* .countdown-stripe {
+
+    width: 100%;
+
+    background-color: var(--color-Stripe);
+
+} */
+
+.countdown-digits {
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    justify-items: flex-start;
+    padding: 0px;
+    gap: 0px;
+
+}
+
+.digits {
+
+    color: var(--color-digits);
+
+    font-size: 75px;
+
+}
+
+.countdown-digits div::after {
+
+    font-weight: bolder;
+    font-size: var(--digitsAfterFontSize);
+
+    color: var(--color-digits-after);
+
+    /* offset-x | offset-y | blur-radius | color */
+    text-shadow: 1px 1px 1px var(--color-digits-after-shadow);
+
+    margin-left: 0px;
+
+}
+
+#digits-days::after {
+
+    content: "Days";
+
+}
+
+#digits-hours::after {
+
+    content: "Hours";
+
+}
+
+#digits-minutes::after {
+
+    content: "Minutes";
+
+}
+
+#digits-seconds::after {
+
+    content: "Seconds";
+
+}
+
+#digits-miliseconds::after {
+
+    content: "Miliseconds";
+
+}
